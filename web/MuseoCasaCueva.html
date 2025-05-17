@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MUSEO CASA CUEVA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('chimeneas.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(5px);
+      font-size: 16px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.7);
+      padding: 10px 20px;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .lang-selector select {
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .hero {
+      position: relative;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+    }
+
+    .descripcion, .galeria, .info, .historia {
+      margin-bottom: 40px;
+    }
+
+    .descripcion {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background: rgba(255,255,255,0.95);
+    }
+
+    .galeria img {
+      width: 280px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .info {
+      text-align: center;
+      padding: 30px;
+      background: rgba(245,245,245,0.95);
+    }
+
+    .info a {
+      color: #0055cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .historia {
+      padding: 30px;
+      text-align: center;
+      background-color: #333;
+      color: white;
+    }
+
+    [data-lang="en"] { display: none; }
+    body.lang-en [data-lang="es"] { display: none; }
+    body.lang-en [data-lang="en"] { display: block; }
+
+    @media (max-width: 768px) {
+      body { font-size: 15px; }
+      .galeria img { width: 90%; }
+    }
+  </style>
+</head>
+<body class="lang-es">
+
+  <header>
+    <h1>MUSEO CASA CUEVA</h1>
+    <div class="lang-selector">
+      <label for="language">Idioma:</label>
+      <select id="language" onchange="document.body.className = this.value">
+        <option value="lang-es">Español</option>
+        <option value="lang-en">English</option>
+      </select>
+    </div>
+  </header>
+
+  <div class="hero">
+    <img src="principal.jpeg" alt="Entrada principal de la casa cueva" />
+  </div>
+
+  <div class="descripcion">
+    <p data-lang="es">
+      Castilla rural es una tierra de historia profunda, arquitectura tradicional y un legado que sigue vivo en sus pueblos. En este museo Casa Cueva explorarás la historia rural que queremos contar en un pequeño recorrido donde podrás ver más de 600 piezas de nuestra colección personal, piezas de este nuestro pueblo y otras muchas traídas de diferentes partes del mundo. Independientemente de la época del año en la que vengas a visitarnos, podrás observar la temperatura que se disfruta viviendo en una cueva, entre 18 y 20 grados. Las casas cueva son una de las mejores soluciones sostenibles y funcionales. Todos los materiales que se han empleado para la reconstrucción son porosos para la buena conservación.
+    </p>
+    <p data-lang="en">
+      Rural Castilla is a land of deep history, traditional architecture and a legacy that is still alive in its villages. In this Casa Cueva museum you will explore the rural history that we want to tell in a small tour where you can see more than 600 pieces from our personal collection. Regardless of the time of year when you come, you'll experience the comfortable temperature of cave living, between 18 and 20 degrees. Cave houses are among the best sustainable and functional solutions. All reconstruction materials are porous to ensure good preservation.
+    </p>
+  </div>
+
+  <div class="galeria">
+    <img src="cocina.jpeg" alt="Antigua cocina de la casa cueva" />
+    <img src="libros.jpeg" alt="Estudio con libros y recuerdos" />
+    <img src="arado.jpeg" alt="Herramientas antiguas para el campo" />
+  </div>
+
+  <div class="info">
+    <p data-lang="es">
+      <strong>📞 Contacto:</strong> Toñi <strong> +34 610099907 </strong><br />
+      <strong>⏰ Horario:</strong> Lunes a Domingo de 10:00 a 19:00 <strong>(con cita previa)</strong><br />
+      👉 <a href="https://g.co/kgs/JnQp4zr" target="_blank">AYÚDANOS A CONOCERNOS CON UNA RESEÑA</a>
+    </p>
+    <p data-lang="en">
+      <strong>📞 Contact:</strong> Toñi <strong> +34 610099907 </strong><br />
+      <strong>⏰ Hours:</strong> Monday to Sunday, 10:00 AM – 7:00 PM <strong>(by appointment)</strong><br />
+      👉 <a href="https://g.co/kgs/JnQp4zr" target="_blank">HELP US GET TO KNOW YOU WITH A REVIEW</a>
+    </p>
+  </div>
+
+  <div class="historia">
+    <p data-lang="es">
+      <strong>HISTORIA</strong><br />
+      Desde el minuto uno teníamos claro hacer este proyecto en el cerro, nos apasiona la historia y qué mejor sitio para ver cómo vivían y mostrar el corazón de la castilla olvidada. Todo ha sido realizado sin ninguna ayuda económica, financiado por nosotros mismos y con el apoyo de nuestros amigos y familiares. El mantenimiento es gracias a la voluntad.
+    </p>
+    <p data-lang="en">
+      <strong>HISTORY</strong><br />
+      From minute one we knew we wanted this project on the hill. We're passionate about history and there's no better place to show the heart of forgotten Castile. Everything was done without any financial help, funded by ourselves with the support of our friends and family. Maintenance is by willpower alone.
+    </p>
+  </div>
+
+  <script>
+    const langSel = document.getElementById('language');
+    langSel.addEventListener('change', () => {
+      localStorage.setItem('lang', langSel.value);
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('lang');
+      if (savedLang) {
+        document.body.className = savedLang;
+        langSel.value = savedLang;
+      }
+    });
+  </script>
+
+<!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 www.museocasacueva.es. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
+
+
